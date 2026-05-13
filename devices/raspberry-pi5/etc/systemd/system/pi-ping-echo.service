@@ -1,0 +1,14 @@
+[Unit]
+Description=UDP ping echo for RTT display
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/easycap-rc
+ExecStart=/usr/bin/python3 /opt/easycap-rc/pi_ping_echo.py --port 5601
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

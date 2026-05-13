@@ -1,0 +1,250 @@
+May 13 11:23:16 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=605184
+May 13 11:23:17 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=606184
+May 13 11:23:18 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=607184
+May 13 11:23:19 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 522.
+May 13 11:23:19 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:19 ground start_pi5_easycap_udp_sender.sh[14975]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:19 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:19 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:19 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=608184
+May 13 11:23:20 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=609184
+May 13 11:23:21 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=610184
+May 13 11:23:22 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 523.
+May 13 11:23:22 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:22 ground start_pi5_easycap_udp_sender.sh[15004]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:22 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:22 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:22 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=611184
+May 13 11:23:23 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=612184
+May 13 11:23:24 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=613184
+May 13 11:23:25 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 524.
+May 13 11:23:25 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:25 ground start_pi5_easycap_udp_sender.sh[15050]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:25 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:25 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:25 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=614184
+May 13 11:23:26 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=615184
+May 13 11:23:27 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=616184
+May 13 11:23:28 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 525.
+May 13 11:23:28 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:28 ground start_pi5_easycap_udp_sender.sh[15084]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:28 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:28 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:28 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=617184
+May 13 11:23:29 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=618184
+May 13 11:23:30 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=619184
+May 13 11:23:31 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=620184
+May 13 11:23:32 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 526.
+May 13 11:23:32 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:32 ground start_pi5_easycap_udp_sender.sh[15098]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:32 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:32 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:32 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=621184
+May 13 11:23:33 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=622184
+May 13 11:23:34 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=623184
+May 13 11:23:35 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 527.
+May 13 11:23:35 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:35 ground start_pi5_easycap_udp_sender.sh[15131]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:35 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:35 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:35 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=624184
+May 13 11:23:36 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=625184
+May 13 11:23:37 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=626184
+May 13 11:23:38 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 528.
+May 13 11:23:38 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:38 ground start_pi5_easycap_udp_sender.sh[15154]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:38 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:38 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:38 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=627184
+May 13 11:23:39 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=628184
+May 13 11:23:40 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=629184
+May 13 11:23:41 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 529.
+May 13 11:23:41 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:41 ground start_pi5_easycap_udp_sender.sh[15179]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:41 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:41 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:41 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=630184
+May 13 11:23:42 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=631184
+May 13 11:23:43 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=632184
+May 13 11:23:44 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=633184
+May 13 11:23:45 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 530.
+May 13 11:23:45 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:45 ground start_pi5_easycap_udp_sender.sh[15201]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:45 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:45 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:45 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=634184
+May 13 11:23:46 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=635184
+May 13 11:23:47 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=636184
+May 13 11:23:48 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 531.
+May 13 11:23:48 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:48 ground start_pi5_easycap_udp_sender.sh[15226]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:48 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:48 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:48 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=637184
+May 13 11:23:49 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=638184
+May 13 11:23:50 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=639184
+May 13 11:23:51 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 532.
+May 13 11:23:51 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:51 ground start_pi5_easycap_udp_sender.sh[15260]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:51 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:51 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:51 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=640184
+May 13 11:23:52 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=641184
+May 13 11:23:53 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=642184
+May 13 11:23:54 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 533.
+May 13 11:23:54 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:54 ground start_pi5_easycap_udp_sender.sh[15280]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:54 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:54 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:54 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=643184
+May 13 11:23:55 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=644184
+May 13 11:23:56 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=645184
+May 13 11:23:57 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=646184
+May 13 11:23:58 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 534.
+May 13 11:23:58 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:23:58 ground start_pi5_easycap_udp_sender.sh[15307]: EasyCAP device not found. Expected /dev/video0
+May 13 11:23:58 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:23:58 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:23:58 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=647184
+May 13 11:23:59 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=648184
+May 13 11:24:00 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=649184
+May 13 11:24:01 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 535.
+May 13 11:24:01 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:01 ground start_pi5_easycap_udp_sender.sh[15327]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:01 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:01 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:01 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=650184
+May 13 11:24:02 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=651184
+May 13 11:24:03 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=652184
+May 13 11:24:04 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 536.
+May 13 11:24:04 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:04 ground start_pi5_easycap_udp_sender.sh[15361]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:04 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:04 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:04 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=653184
+May 13 11:24:05 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=654184
+May 13 11:24:06 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=655184
+May 13 11:24:07 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 537.
+May 13 11:24:07 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:07 ground start_pi5_easycap_udp_sender.sh[15375]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:07 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:07 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:07 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=656184
+May 13 11:24:08 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=657184
+May 13 11:24:09 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=658184
+May 13 11:24:10 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=659184
+May 13 11:24:11 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 538.
+May 13 11:24:11 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:11 ground start_pi5_easycap_udp_sender.sh[15408]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:11 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:11 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:11 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=660184
+May 13 11:24:12 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=661184
+May 13 11:24:13 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=662184
+May 13 11:24:14 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 539.
+May 13 11:24:14 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:14 ground start_pi5_easycap_udp_sender.sh[15422]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:14 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:14 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:14 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=663184
+May 13 11:24:15 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=664184
+May 13 11:24:16 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=665184
+May 13 11:24:17 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 540.
+May 13 11:24:17 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:17 ground start_pi5_easycap_udp_sender.sh[15456]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:17 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:17 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:17 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=666184
+May 13 11:24:18 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=667184
+May 13 11:24:19 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=668184
+May 13 11:24:20 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 541.
+May 13 11:24:20 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:20 ground start_pi5_easycap_udp_sender.sh[15478]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:20 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:20 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:20 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=669184
+May 13 11:24:21 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=670184
+May 13 11:24:22 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=671184
+May 13 11:24:23 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=672184
+May 13 11:24:24 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 542.
+May 13 11:24:24 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:24 ground start_pi5_easycap_udp_sender.sh[15503]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:24 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:24 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:24 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=673184
+May 13 11:24:25 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=674184
+May 13 11:24:26 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=675184
+May 13 11:24:27 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 543.
+May 13 11:24:27 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:27 ground start_pi5_easycap_udp_sender.sh[15525]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:27 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:27 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:27 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=676184
+May 13 11:24:28 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=677184
+May 13 11:24:29 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=678184
+May 13 11:24:30 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 544.
+May 13 11:24:30 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:30 ground start_pi5_easycap_udp_sender.sh[15551]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:30 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:30 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:30 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=679184
+May 13 11:24:31 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=680184
+May 13 11:24:32 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=681184
+May 13 11:24:33 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 545.
+May 13 11:24:33 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:33 ground start_pi5_easycap_udp_sender.sh[15585]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:33 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:33 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:33 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=682184
+May 13 11:24:34 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=683184
+May 13 11:24:35 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=684184
+May 13 11:24:36 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=685184
+May 13 11:24:37 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 546.
+May 13 11:24:37 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:37 ground start_pi5_easycap_udp_sender.sh[15605]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:37 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:37 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:37 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=686184
+May 13 11:24:38 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=687184
+May 13 11:24:39 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=688184
+May 13 11:24:40 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 547.
+May 13 11:24:40 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:40 ground start_pi5_easycap_udp_sender.sh[15632]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:40 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:40 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:40 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=689184
+May 13 11:24:41 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=690184
+May 13 11:24:42 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=691184
+May 13 11:24:43 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 548.
+May 13 11:24:43 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:43 ground start_pi5_easycap_udp_sender.sh[15652]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:43 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:43 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:43 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=692184
+May 13 11:24:44 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=693184
+May 13 11:24:45 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=694184
+May 13 11:24:46 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 549.
+May 13 11:24:46 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:46 ground start_pi5_easycap_udp_sender.sh[15697]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:46 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:46 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:46 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=695184
+May 13 11:24:47 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=696184
+May 13 11:24:48 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=697184
+May 13 11:24:49 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=698184
+May 13 11:24:50 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 550.
+May 13 11:24:50 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:50 ground start_pi5_easycap_udp_sender.sh[15711]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:50 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:50 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:50 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=699184
+May 13 11:24:51 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=700184
+May 13 11:24:52 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=701184
+May 13 11:24:53 ground systemd[1]: easycap-udp.service: Scheduled restart job, restart counter is at 551.
+May 13 11:24:53 ground systemd[1]: Started easycap-udp.service - EasyCAP low-latency UDP sender (Raspberry Pi 5).
+May 13 11:24:53 ground start_pi5_easycap_udp_sender.sh[15744]: EasyCAP device not found. Expected /dev/video0
+May 13 11:24:53 ground systemd[1]: easycap-udp.service: Main process exited, code=exited, status=1/FAILURE
+May 13 11:24:53 ground systemd[1]: easycap-udp.service: Failed with result 'exit-code'.
+May 13 11:24:53 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=702184
+May 13 11:24:54 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=703184
+May 13 11:24:55 ground python3[1465]: forwarded=244309 held=1345 bytes=6351780 bad=0 rc_age_ms=704184

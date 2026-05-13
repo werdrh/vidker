@@ -1,0 +1,273 @@
+{
+  "host": "100.91.223.27",
+  "user": "pi",
+  "collected_at": "2026-05-13T08:24:56.774064+00:00",
+  "files": [
+    {
+      "path": "/etc/systemd/system/crsf-uart.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 380,
+      "sha256": "bce74caf71f6c65d76241e55f3350b9f39c8b2fd7f2090dc5723d25eb0f6bcd9"
+    },
+    {
+      "path": "/etc/systemd/system/easycap-udp.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 368,
+      "sha256": "130ff1abd24406da616918f03529432e04ceea80975a853a7a1cc6dc38fbedf7"
+    },
+    {
+      "path": "/etc/systemd/system/pi-direct-lan-keepalive.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 418,
+      "sha256": "39fa4b6ebc383b54328feb878b0be7c6fe78cef616a087b5a279778427a7ef36"
+    },
+    {
+      "path": "/etc/systemd/system/pi-dji-crsf-uart.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 418,
+      "sha256": "e9d54bd4a7c80e518aa97d3dad17fbf0ce590cb3e5dc59515136c785142591f5"
+    },
+    {
+      "path": "/etc/systemd/system/pi-dji-goggles-rtp.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 498,
+      "sha256": "6c28f8ba49bd8ba60ecd359382827d829ab499c7cd3c565f39739dd65d4c8f2a"
+    },
+    {
+      "path": "/etc/systemd/system/pi-dji-goggles-rtp.service.d/20-lowloss.confnsystemctl",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/etc/systemd/system/pi-lan-internet-share.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 315,
+      "sha256": "6769640236cac519d43a10d12592a2058f6266984f093aa79c3aa91725db53c9"
+    },
+    {
+      "path": "/etc/systemd/system/pi-ping-echo.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 298,
+      "sha256": "a2100333b6ad0ad7219608da623f27af13d8e1d5285d987a8855562af14fd6eb"
+    },
+    {
+      "path": "/opt/easycap-rc/crsf_host_bridge.py",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 3482,
+      "sha256": "cd8666f104a3ef5c6c33b48cf8cbbcca7a8308bd703acbfb8e1c0255319644b9"
+    },
+    {
+      "path": "/opt/easycap-rc/easycap_udp_jpeg_sender_gst.py",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 6516,
+      "sha256": "84e4227e3466f499a42a89ff7686efc87a203a1c7185851c445acd251f58c090"
+    },
+    {
+      "path": "/opt/easycap-rc/pi_ping_echo.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 503,
+      "sha256": "ec7ef7af6ba85516094409d2d624aaad21d260a9a32bda6ea04d2d560d70a1b8"
+    },
+    {
+      "path": "/opt/easycap-rc/pi_udp_crsf_to_uart.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 5088,
+      "sha256": "e248b06a924fe00a9f698165b03b23ad0ed43e2923c5ad20b052726f1b9ddb76"
+    },
+    {
+      "path": "/opt/easycap-rc/start_pi5_easycap_udp_sender.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 784,
+      "sha256": "2a23e23f03c3b65a7ac4b704396b1c0093dc404ea374aa04c26b4b58d409c50b"
+    },
+    {
+      "path": "/home/pi/dji/DJI_PI5_STATUS.md",
+      "status": "ok",
+      "mode": "0o664",
+      "size": 2387,
+      "sha256": "804009949c110e9dc2abd27e6647cf2f324c5f63e82507266fb24fa9f05249fe"
+    },
+    {
+      "path": "/home/pi/dji/DJI_SQUIRRELCAST_FINDINGS.md",
+      "status": "ok",
+      "mode": "0o664",
+      "size": 7842,
+      "sha256": "013d8f7271c2632f49bd97ded3dad5fb48eb74d83d24f6c87d67b55102781cd5"
+    },
+    {
+      "path": "/home/pi/dji/dji_usb_discover.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 2691,
+      "sha256": "4ed9fb6f1bf05aed77c57e3e21b6c1d66f98c5b82ff44d4c6e9c4c46bfe1a494"
+    },
+    {
+      "path": "/home/pi/dji/pi5_aoa_ffs.py",
+      "status": "ok",
+      "mode": "0o775",
+      "size": 5656,
+      "sha256": "3a9f3a36d4bc2dd8fa0010850a4a88a93f1e7e21d59d0c4d734aed400350d2fc"
+    },
+    {
+      "path": "/home/pi/dji/pi5_dji_gadgetfs_watchdog.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 2855,
+      "sha256": "8c71f0c5cc3734796131bad71ad91429df862f1cb95aef07caffb49f1ffb6fad"
+    },
+    {
+      "path": "/home/pi/dji/pi5_dji_liveview.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 970,
+      "sha256": "748f4fafd1bb8f4507bbacf778c82e0712a7ce1380909b3ef5b128ad054a3434"
+    },
+    {
+      "path": "/home/pi/dji/pi5_dji_probe_cmds.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 881,
+      "sha256": "3edee246b022404c6d22b9a7dc91a5dc5746562598d520a521c8a1fd4d64c950"
+    },
+    {
+      "path": "/home/pi/dji/pi5_dji_probe.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 170,
+      "sha256": "6dcd9bb350ecd8f7b2424bb7a7958c21588c7dd920d2be792bdc55afda5a271c"
+    },
+    {
+      "path": "/home/pi/dji/pi5_dji_restore_rndis.sh",
+      "status": "ok",
+      "mode": "0o775",
+      "size": 648,
+      "sha256": "7b89be5c74d46cc615ea22b5f34b86962f8f0d6a846448c25c75731be6fb6029"
+    },
+    {
+      "path": "/home/pi/dji/pi5_gadgetfs_aoa_bridge.c",
+      "status": "ok",
+      "mode": "0o664",
+      "size": 23046,
+      "sha256": "89ab09582837df9217e869bc3d8301e941587da8656ee19a1eee3873eade3175"
+    },
+    {
+      "path": "/home/pi/dji/pi5_gadgetfs_aoa_bridge_c",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 72656,
+      "sha256": "1e1afa57cb85d3ee26bf3d731392bb442b459f196c22f7fde9e417db45254fee"
+    },
+    {
+      "path": "/home/pi/dji/pi5_gadgetfs_aoa_probe.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 14151,
+      "sha256": "f9445b9e0456e8b3a69eaf8592f51b8c4d547017b165f1bd965883f9c1714c24"
+    },
+    {
+      "path": "/home/pi/dji/pi5_start_aoa_gadget.sh",
+      "status": "ok",
+      "mode": "0o775",
+      "size": 1717,
+      "sha256": "e073a1c100d5a29f30f16715afc4b7b7b8347c6de6c6df75c7d88684408303c7"
+    },
+    {
+      "path": "/home/pi/dji/pi5_start_aoa_printer_probe.sh",
+      "status": "ok",
+      "mode": "0o775",
+      "size": 1641,
+      "sha256": "af573cc831320cc14fd671cc0e6f71206524ed2d28a69c6e80986cd7ade3cd6d"
+    },
+    {
+      "path": "/home/pi/dji/pi5_start_dji_watchdog.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1059,
+      "sha256": "bce3d3c71769b95f1af1cc2d4606c424ba6f0c912220b7adf27aea5f1a00ff0a"
+    },
+    {
+      "path": "/home/pi/dji/pi5_start_gadgetfs_aoa_bridge_c.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1565,
+      "sha256": "32efc768c6dae128962612224534589c3d574dde4c6f8ed7a0459b4300d3f8dd"
+    },
+    {
+      "path": "/home/pi/dji/pi5_start_gadgetfs_aoa_probe.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 696,
+      "sha256": "867270d5d8c8581b465febf6be31caf83194644066e521bf4d81fd332c6302b8"
+    },
+    {
+      "path": "/home/pi/dji/pi5_stop_aoa_gadget.sh",
+      "status": "ok",
+      "mode": "0o775",
+      "size": 728,
+      "sha256": "af7b652e354326b14703651c8196c4098b8e63815d980c45bc33a7ee253bf3b4"
+    },
+    {
+      "path": "/home/pi/dji/pi5_stop_aoa_printer_probe.sh",
+      "status": "ok",
+      "mode": "0o775",
+      "size": 439,
+      "sha256": "427766e7bd57b906e3b5c6bc6b37d32f02f1fba983e496ca1dac4842297a2365"
+    },
+    {
+      "path": "/home/pi/dji/pi-direct-lan-keepalive.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1412,
+      "sha256": "0bebbf51a90a270df972e6ca534023714430a89876339c1263201a5397ea923e"
+    },
+    {
+      "path": "/home/pi/dji/pi-dji-auto-bridge.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 3892,
+      "sha256": "3481f6d4691bf7489263d1398c56f47164c73e435abd1febf096082c0f3a4841"
+    },
+    {
+      "path": "/home/pi/dji/pi-lan-internet-share.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1896,
+      "sha256": "68e75f173274019836d26bc9791a64b89997ca36ac7f665a621a67f999dd0626"
+    },
+    {
+      "path": "/home/pi/dji/radxa_goggles_bridge.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 27313,
+      "sha256": "a76b0e35ecd6aba707f3f87d70af02efd4a9731e7f4cb3c9070392fbcf684221"
+    },
+    {
+      "path": "/boot/firmware/config.txt",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1538,
+      "sha256": "7af88f09025cd3d16d3a2738fa205b74edd07ad6eabce25baab52cb2f08c8adf"
+    },
+    {
+      "path": "/boot/firmware/cmdline.txt",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 191,
+      "sha256": "f29615292587d300e25bdd65545f8e6daea029402f75bf1f05acd513b8420114"
+    }
+  ]
+}

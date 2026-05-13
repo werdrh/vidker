@@ -1,0 +1,14 @@
+[Unit]
+Description=Share Raspberry Pi internet from Wi-Fi to direct LAN
+After=NetworkManager.service
+Wants=NetworkManager.service
+
+[Service]
+Type=oneshot
+Environment=LAN_IFACE=eth0
+Environment=WAN_IFACE=wlan0
+ExecStart=/home/pi/dji/pi-lan-internet-share.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

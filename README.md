@@ -7,7 +7,9 @@ It stores the active service files, scripts, boot overlays, and restore tooling 
 ## What is included
 
 - `devices/radxa-zero3e/` - current Radxa Zero 3E ground-station files collected from the live board.
+- `devices/raspberry-pi5/` - current Raspberry Pi 5 bridge files collected from the live board.
 - `scripts/restore_radxa_zero3e.sh` - restore script to run on a fresh/repaired Radxa image.
+- `scripts/restore_raspberry_pi5.sh` - restore script to run on a fresh/repaired Pi 5 image.
 - `scripts/collect_radxa_zero3e.py` - collector script to refresh this repo from the live Radxa.
 - `devices/radxa-zero3e/system-state.txt` - diagnostic snapshot from the board at collection time.
 
@@ -34,6 +36,21 @@ sudo reboot
 ```
 
 The restore script backs up existing target files to `/root/vidker-restore-backup-YYYYmmdd-HHMMSS` before copying anything.
+
+## Quick restore on Raspberry Pi 5
+
+On the Pi 5:
+
+```sh
+sudo apt-get update
+sudo apt-get install -y git openssh-server tailscale python3
+git clone https://github.com/werdrh/vidker.git
+cd vidker
+sudo ./scripts/restore_raspberry_pi5.sh --apply-now
+sudo reboot
+```
+
+The Pi restore script backs up replaced files to `/root/vidker-pi5-restore-backup-YYYYmmdd-HHMMSS`.
 
 ## Refresh snapshot from PC
 

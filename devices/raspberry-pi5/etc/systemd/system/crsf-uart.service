@@ -1,0 +1,14 @@
+[Unit]
+Description=CRSF UART bridge for ELRS TX (Raspberry Pi 5)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/easycap-rc
+ExecStart=/usr/bin/python3 /opt/easycap-rc/crsf_host_bridge.py --serial /dev/ttyAMA0 --baud 400000 --udp-port 5700 --rate-hz 150 --debug
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

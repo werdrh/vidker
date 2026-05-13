@@ -1,0 +1,19 @@
+[Unit]
+Description=DJI Goggles USB GadgetFS to Radxa RTP/H264 bridge
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/pi/dji
+ExecStartPre=/bin/sh -c 'modprobe gadgetfs; mkdir -p /dev/gadget; mountpoint -q /dev/gadget || mount -t gadgetfs gadgetfs /dev/gadget'
+ExecStart=/home/pi/dji/pi-dji-auto-bridge.sh
+Restart=always
+RestartSec=1
+KillSignal=SIGTERM
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

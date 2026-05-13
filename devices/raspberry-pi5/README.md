@@ -1,6 +1,6 @@
 # Raspberry Pi 5 snapshot
 
-This board still needs a fresh collection pass.
+Collected from the live board `ground` on `2026-05-13`.
 
 The last known role of the Pi 5 in this project:
 
@@ -14,4 +14,11 @@ Known prior addresses:
 - Tailscale: `100.91.223.27`
 - LAN: `192.168.1.179`
 
-Do not store Tailscale keys, WireGuard keys, FPV Mesh provision files, or password hashes here.
+Included areas:
+
+- `/home/pi/dji` DJI USB/gadget bridge scripts and C bridge binary/source.
+- `/opt/easycap-rc` EasyCAP/CRSF helper scripts still installed on the Pi.
+- `/etc/systemd/system` Pi video/control/link services.
+- `/boot/firmware/config.txt` and `/boot/firmware/cmdline.txt`.
+
+Do not store Tailscale keys, WireGuard keys, FPV Mesh provision files, Wi-Fi PSKs, or password hashes here.

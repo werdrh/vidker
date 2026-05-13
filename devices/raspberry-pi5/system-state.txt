@@ -1,0 +1,69 @@
+Collected: 2026-05-13T11:24:55+03:00
+Host: ground
+Arch: aarch64
+Kernel: Linux ground 6.12.75+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.75-1+rpt1 (2026-03-11) aarch64 GNU/Linux
+
+== failed units ==
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+
+0 loaded units listed.
+
+== enabled dji/pi services ==
+crsf-uart.service                            disabled        enabled
+easycap-udp.service                          enabled         enabled
+pi-direct-lan-keepalive.service              enabled         enabled
+pi-dji-crsf-uart.service                     enabled         enabled
+pi-dji-goggles-rtp.service                   enabled         enabled
+pi-lan-internet-share.service                enabled         enabled
+pi-ping-echo.service                         disabled        enabled
+regenerate_ssh_host_keys.service             enabled         enabled
+rpi-eeprom-update.service                    enabled         enabled
+rpi-remove-swap-file@.service                static          -
+rpi-resize-swap-file.service                 static          -
+rpi-resize.service                           disabled        enabled
+rpi-setup-loop@.service                      static          -
+rpi-usb-gadget-ics.service                   disabled        enabled
+rpi-zram-writeback.service                   static          -
+ssh.service                                  enabled         enabled
+sshd-keygen.service                          enabled         enabled
+sshd-unix-local@.service                     alias           -
+sshd.service                                 alias           -
+sshd@.service                                indirect        enabled
+sshswitch.service                            enabled         enabled
+tailscaled.service                           enabled         enabled
+ssh.socket                                   disabled        enabled
+sshd-unix-local.socket                       generated       -
+rescue-ssh.target                            static          -
+ssh-access.target                            static          -
+rpi-zram-writeback.timer                     generated       -
+
+== active units ==
+  NetworkManager.service          loaded active running Network Manager
+  pi-direct-lan-keepalive.service loaded active running Keep Raspberry Pi direct LAN link to Radxa alive
+  pi-dji-crsf-uart.service        loaded active running Radxa UDP CRSF to ELRS TX UART on Raspberry Pi
+  pi-dji-goggles-rtp.service      loaded active running DJI Goggles USB GadgetFS to Radxa RTP/H264 bridge
+  ssh.service                     loaded active running OpenBSD Secure Shell server
+  tailscaled.service              loaded active running Tailscale node agent
+
+== links ==
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0             UP             192.168.121.60/24 192.168.0.178/24 192.168.121.50/24 fe80::2ecf:67ff:fe5d:55ce/64 
+wlan0            DOWN           
+tailscale0       UNKNOWN        100.91.223.27/32 fd7a:115c:a1e0::ca34:df1b/128 fe80::2fd0:4ef0:b0f:3656/64 
+
+== routes ==
+default via 192.168.0.1 dev eth0 proto dhcp src 192.168.0.178 metric 200 
+192.168.0.0/24 dev eth0 proto kernel scope link src 192.168.0.178 metric 200 
+192.168.121.0/24 dev eth0 proto kernel scope link src 192.168.121.60 metric 200 
+192.168.121.0/24 dev eth0 proto kernel scope link src 192.168.121.50 metric 200 
+
+== dji processes ==
+949 bash /home/pi/dji/pi-direct-lan-keepalive.sh
+1465 /usr/bin/python3 /opt/easycap-rc/pi_udp_crsf_to_uart.py --listen-port 5000 --serial /dev/ttyAMA0 --baud 400000 --tx-addr 0xEE --hold-ms 120 --repeat-hz 100 --debug
+1480 /bin/sh /home/pi/dji/pi-dji-auto-bridge.sh
+5738 /home/pi/dji/pi5_gadgetfs_aoa_bridge_c --dest-ip 100.80.47.96 --dest-port 5604 --udp-mtu 1200 --send-pacing-us 0 --tcp --rtp --rtp-fps 60 --source-signal-port 5512
+15758 bash -c printf 'Collected: '; date -Is printf 'Host: '; hostname printf 'Arch: '; uname -m printf 'Kernel: '; uname -a printf '\n== failed units ==\n'; systemctl --failed --no-pager || true printf '\n== enabled dji/pi services ==\n'; systemctl list-unit-files --no-pager | grep -E 'pi-|dji|crsf|easycap|tailscale|ssh' || true printf '\n== active units ==\n'; systemctl --no-pager --type=service --state=running | grep -E 'pi-|dji|crsf|easycap|tailscale|ssh|NetworkManager' || true printf '\n== links ==\n'; ip -brief addr || true printf '\n== routes ==\n'; ip route || true printf '\n== dji processes ==\n'; pgrep -a -f 'dji|gadget|aoa|crsf|rtp|udp' || true printf '\n== serial ==\n'; ls -l /dev/ttyAMA0 /dev/serial0 /dev/ttyS0 2>/dev/null || true 
+
+== serial ==
+lrwxrwxrwx 1 root root          7 May 13 09:24 /dev/serial0 -> ttyAMA0
+crw-rw---- 1 root dialout 204, 64 May 13 11:13 /dev/ttyAMA0

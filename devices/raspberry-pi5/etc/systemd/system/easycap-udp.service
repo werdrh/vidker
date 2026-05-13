@@ -1,0 +1,15 @@
+[Unit]
+Description=EasyCAP low-latency UDP sender (Raspberry Pi 5)
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/easycap-rc
+ExecStart=/opt/easycap-rc/start_pi5_easycap_udp_sender.sh 100.97.231.5 5600 /dev/video0 720 480 25
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

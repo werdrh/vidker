@@ -1,0 +1,14 @@
+[Unit]
+Description=Radxa UDP CRSF to ELRS TX UART on Raspberry Pi
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/easycap-rc
+ExecStart=/usr/bin/python3 /opt/easycap-rc/pi_udp_crsf_to_uart.py --listen-port 5000 --serial /dev/ttyAMA0 --baud 400000 --tx-addr 0xEE --hold-ms 120 --repeat-hz 100 --debug
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

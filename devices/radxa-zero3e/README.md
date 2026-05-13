@@ -8,6 +8,7 @@ Current role:
 - RTP/H.264 receive on UDP `5600`.
 - CRSF UART bridge on `/dev/ttyS4` at `420000`.
 - Source modes: `camera`, `pi-local`, `pi-internet`.
+- Additional source mode: `pi-easycap` / OSD label `PI CAP`, controlled by the same mode button.
 - Recording to external USB media at `/media/recordings`.
 - OSD, signal-loss splash, record button, mode button, power button, guard/watchdog.
 

@@ -6,6 +6,7 @@ The last known role of the Pi 5 in this project:
 
 - Connects to DJI Goggles over USB gadget/accessory work.
 - Extracts/transports DJI liveview H.264 toward the Radxa ground station.
+- Can transmit EasyCAP capture-card video as H.264/RTP to the Radxa in `PI CAP` mode.
 - Receives CRSF/control over the network and forwards it to the ELRS TX UART.
 - Can work over direct LAN or internet tunnel, depending on mode.
 
@@ -17,6 +18,8 @@ Known prior addresses:
 Included areas:
 
 - `/home/pi/dji` DJI USB/gadget bridge scripts and C bridge binary/source.
+- `/home/pi/dji/pi-source-mode-agent.py` mode listener controlled by the Radxa mode button.
+- `/home/pi/dji/pi-easycap-h264-rtp.sh` EasyCAP MJPEG to H.264/RTP low-latency sender.
 - `/opt/easycap-rc` EasyCAP/CRSF helper scripts still installed on the Pi.
 - `/etc/systemd/system` Pi video/control/link services.
 - `/boot/firmware/config.txt` and `/boot/firmware/cmdline.txt`.

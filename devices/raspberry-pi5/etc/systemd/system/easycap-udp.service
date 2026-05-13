@@ -6,8 +6,8 @@ StartLimitIntervalSec=0
 
 [Service]
 Type=simple
-WorkingDirectory=/opt/easycap-rc
-ExecStart=/opt/easycap-rc/start_pi5_easycap_udp_sender.sh 100.97.231.5 5600 /dev/video0 720 480 25
+WorkingDirectory=/home/pi/dji
+ExecStart=/home/pi/dji/pi-easycap-h264-rtp.sh
 Restart=always
 RestartSec=3
 

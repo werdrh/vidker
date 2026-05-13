@@ -51,6 +51,7 @@ copy_tree boot
 
 chown -R pi:pi /home/pi/dji 2>/dev/null || true
 chmod 755 /home/pi/dji/*.sh /opt/easycap-rc/*.sh 2>/dev/null || true
+chmod 755 /home/pi/dji/*.py 2>/dev/null || true
 chmod 755 /home/pi/dji/pi5_gadgetfs_aoa_bridge_c 2>/dev/null || true
 
 systemctl daemon-reload
@@ -61,12 +62,15 @@ systemctl enable \
   pi-dji-crsf-uart.service \
   pi-dji-goggles-rtp.service \
   pi-lan-internet-share.service \
-  easycap-udp.service
+  pi-source-mode-agent.service
+
+systemctl disable easycap-udp.service 2>/dev/null || true
 
 if [ "$APPLY_NOW" = "1" ]; then
   systemctl restart pi-direct-lan-keepalive.service || true
   systemctl restart pi-dji-crsf-uart.service pi-dji-goggles-rtp.service || true
-  systemctl restart pi-lan-internet-share.service easycap-udp.service || true
+  systemctl restart pi-lan-internet-share.service pi-source-mode-agent.service || true
+  systemctl stop easycap-udp.service || true
 fi
 
 echo "Pi 5 restore complete."

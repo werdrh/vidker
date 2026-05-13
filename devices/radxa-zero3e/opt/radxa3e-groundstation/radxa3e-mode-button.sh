@@ -13,13 +13,14 @@ set -euo pipefail
 : "${SPLASH_ACTIVE_FILE:=/run/radxa3e-splash-active}"
 : "${SPLASH_SCRIPT:=/opt/radxa3e-groundstation/radxa3e-splash.sh}"
 : "${AUTO_LINK_SERVICE:=radxa3e-auto-link.service}"
-: "${MODE_SEQUENCE:=camera pi-local pi-internet}"
+: "${MODE_SEQUENCE:=camera pi-local pi-internet pi-easycap}"
 
 mode_label() {
   case "$1" in
     camera) echo "Оптика" ;;
     pi-local) echo "PI Lan" ;;
     pi-internet) echo "Internet" ;;
+    pi-easycap) echo "PI CAP" ;;
     *) echo "MODE $1" ;;
   esac
 }

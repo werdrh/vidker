@@ -13,6 +13,15 @@ It stores the active service files, scripts, boot overlays, and restore tooling 
 - `scripts/collect_radxa_zero3e.py` - collector script to refresh this repo from the live Radxa.
 - `devices/radxa-zero3e/system-state.txt` - diagnostic snapshot from the board at collection time.
 
+## Radxa Source Modes
+
+The Radxa mode button cycles through:
+
+- `camera` - normal OpenIPC/optical camera mode, static camera side address.
+- `pi-local` - Raspberry Pi DJI bridge over direct LAN.
+- `pi-internet` - Raspberry Pi DJI bridge over the internet/Tailscale path.
+- `pi-easycap` - Raspberry Pi EasyCAP capture card mode. Radxa first tries direct LAN to the Pi, then falls back to Tailscale. The Pi source-mode agent starts only the EasyCAP H.264/RTP sender and stops the DJI sender so they do not fight for UDP `5600`.
+
 ## What is intentionally not included
 
 - Private SSH keys.

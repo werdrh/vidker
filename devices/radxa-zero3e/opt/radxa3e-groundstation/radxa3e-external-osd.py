@@ -59,6 +59,7 @@ def current_mode_line():
         'optics': 'Оптика',
         'pi-local': 'PI Lan',
         'pi-internet': 'Internet',
+        'pi-easycap': 'PI CAP',
     }
     return labels.get(source, f'MODE {source.upper()}')
 
@@ -91,7 +92,7 @@ def optical_rx_hidden():
         return False
 
     source, link = current_source_and_link()
-    if source in ('pi-local', 'pi-internet') or link in ('local', 'tailscale'):
+    if source in ('pi-local', 'pi-internet', 'pi-easycap') or link in ('local', 'tailscale', 'easycap', 'easycap-tailscale'):
         return True
     if source in ('camera', 'optics') or link == 'camera':
         return False

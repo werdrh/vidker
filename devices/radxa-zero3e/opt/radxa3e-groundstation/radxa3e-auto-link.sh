@@ -5,6 +5,9 @@ LOCAL_PI_IP="${LOCAL_PI_IP:-192.168.121.50}"
 CAMERA_IP="${CAMERA_IP:-192.168.121.50}"
 TAILSCALE_PI_HOST="${TAILSCALE_PI_HOST:-ground}"
 TAILSCALE_PI_FALLBACK_IP="${TAILSCALE_PI_FALLBACK_IP:-100.91.223.27}"
+LOCAL_RADXA_IP="${LOCAL_RADXA_IP:-192.168.121.51}"
+TAILSCALE_RADXA_IP="${TAILSCALE_RADXA_IP:-100.80.47.96}"
+PI_SOURCE_MODE_PORT="${PI_SOURCE_MODE_PORT:-5513}"
 CONTROL_DEFAULTS="${CONTROL_DEFAULTS:-/etc/default/radxa3e-control-bridge}"
 OSD_DEFAULTS="${OSD_DEFAULTS:-/etc/default/radxa3e-osd-status}"
 MODE_FILE="${MODE_FILE:-/run/radxa3e-link-mode}"
@@ -52,6 +55,16 @@ choose_target() {
       printf '%s tailscale\n' "$tailscale_ip"
       return
       ;;
+    pi-easycap)
+      if ping -c 1 -W 1 "$LOCAL_PI_IP" >/dev/null 2>&1; then
+        printf '%s easycap\n' "$LOCAL_PI_IP"
+        return
+      fi
+      tailscale_ip="$(getent ahostsv4 "$TAILSCALE_PI_HOST" 2>/dev/null | awk '{print $1; exit}')"
+      tailscale_ip="${tailscale_ip:-$TAILSCALE_PI_FALLBACK_IP}"
+      printf '%s easycap-tailscale\n' "$tailscale_ip"
+      return
+      ;;
   esac
 
   if ping -c 1 -W 1 "$LOCAL_PI_IP" >/dev/null 2>&1; then
@@ -67,6 +80,39 @@ choose_target() {
   fi
 
   printf '%s waiting\n' "$tailscale_ip"
+}
+
+notify_pi_source_mode() {
+  target="$1"
+  mode="$2"
+  case "$mode" in
+    camera)
+      msg="camera"
+      ;;
+    local)
+      msg="dji ${LOCAL_RADXA_IP} 5600 udp"
+      ;;
+    tailscale)
+      msg="dji ${TAILSCALE_RADXA_IP} 5604 tcp"
+      ;;
+    easycap)
+      msg="easycap ${LOCAL_RADXA_IP} 5600 udp"
+      ;;
+    easycap-tailscale)
+      msg="easycap ${TAILSCALE_RADXA_IP} 5600 udp"
+      ;;
+    *)
+      return
+      ;;
+  esac
+  MSG="$msg" TARGET="$target" PORT="$PI_SOURCE_MODE_PORT" python3 - <<'PY' >/dev/null 2>&1 || true
+import os
+import socket
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.settimeout(0.2)
+sock.sendto((os.environ["MSG"] + "\n").encode("ascii", "ignore"), (os.environ["TARGET"], int(os.environ["PORT"])))
+PY
 }
 
 ensure_pixelpilot() {
@@ -107,6 +153,7 @@ apply_mode() {
 
   systemctl restart radxa3e-control-bridge.service >/dev/null 2>&1 || true
   systemctl restart radxa3e-external-osd.service >/dev/null 2>&1 || true
+  notify_pi_source_mode "$target" "$mode"
 
   systemctl enable --now radxa3e-signal-loss-watch.service >/dev/null 2>&1 || true
 

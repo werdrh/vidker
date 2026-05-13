@@ -1,0 +1,7 @@
+[Unit]
+Description=Periodic external recording media remount check
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '/opt/radxa3e-groundstation/radxa3e-record-mount.sh || true'

@@ -1,0 +1,17 @@
+[Unit]
+Description=Radxa 3E low-priority external RTP recorder
+After=radxa3e-udp-splitter.service
+Wants=radxa3e-udp-splitter.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/radxa3e-gs
+Environment=UDP_PORT=5602
+ExecStart=/opt/radxa3e-groundstation/radxa3e-recorder.sh
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

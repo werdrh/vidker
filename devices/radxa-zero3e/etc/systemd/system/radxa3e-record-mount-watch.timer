@@ -1,0 +1,11 @@
+[Unit]
+Description=Retry external recording media mount periodically
+
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=10s
+AccuracySec=2s
+Unit=radxa3e-record-mount-watch.service
+
+[Install]
+WantedBy=timers.target

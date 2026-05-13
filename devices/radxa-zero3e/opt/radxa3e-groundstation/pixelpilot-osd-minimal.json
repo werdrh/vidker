@@ -1,0 +1,14 @@
+{
+  "format": "0.0.1",
+  "assets_dir": "/usr/local/share/pixelpilot/",
+  "widgets": [
+    {
+      "name": "Radxa column",
+      "type": "ExternalSurfaceWidget",
+      "x": 0,
+      "y": 0,
+      "shm_name": "/radxa3e_status_osd",
+      "facts": []
+    }
+  ]
+}

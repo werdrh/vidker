@@ -1,0 +1,8 @@
+[Unit]
+Description=Scan external recording drive for unremuxed fMP4 files
+After=radxa3e-record-button.service
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/opt/radxa3e-groundstation/radxa3e-record-button.sh --scan-remux

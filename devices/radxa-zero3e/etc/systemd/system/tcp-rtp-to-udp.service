@@ -1,0 +1,15 @@
+[Unit]
+Description=TCP ordered RTP receiver for DJI-over-Tailscale video
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/tcp_rtp_to_udp --listen-port 5604 --dest-ip 127.0.0.1 --dest-port 5600
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

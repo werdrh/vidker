@@ -1,0 +1,15 @@
+[Unit]
+Description=Radxa 3E video source mode button
+After=multi-user.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/radxa3e-mode-button
+ExecStart=/opt/radxa3e-groundstation/radxa3e-mode-button.sh
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

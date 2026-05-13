@@ -1,0 +1,17 @@
+POWER_BUTTON_LINE=PIN_18
+POWER_BUTTON_BIAS=pull-up
+POWER_BUTTON_ACTIVE_LEVEL=0
+POWER_BUTTON_HOLD_SEC=3
+POWER_BUTTON_POLL_SEC=0.25
+POWER_BUTTON_LOCKOUT_SEC=5
+POWER_MESSAGE_FILE=/run/radxa3e-record-status
+PIXELPILOT_MSG_FILE=/run/pixelpilot.msg
+POWER_WARN_MESSAGE=Безпечне вимкнення...
+POWER_ACTION=halt
+POWER_DISPLAY_SEC=0.35
+POWER_STOP_SERVICES=radxa3e-signal-loss-watch.service radxa3e-guard.service radxa3e-record-button.service radxa3e-external-osd.service radxa3e-osd-status.service radxa3e-gs.service radxa3e-control-bridge.service radxa3e-record-sync.timer radxa3e-record-sync.service
+SPLASH_IMAGE=/opt/radxa3e-groundstation/no-signal.jpg
+FB_DEVICE=/dev/fb0
+FB_WIDTH=1920
+FB_HEIGHT=1080
+FFMPEG_BIN=/usr/bin/ffmpeg

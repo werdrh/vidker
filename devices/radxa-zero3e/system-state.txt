@@ -1,0 +1,173 @@
+Collected: 2026-05-13T08:16:03+00:00
+Host: radxa-zero3
+Arch: aarch64
+Kernel: Linux radxa-zero3 6.1.84-10-rk2410-nocsf #10 SMP Mon Jul 14 10:45:01 UTC 2025 aarch64 GNU/Linux
+
+== failed units ==
+  UNIT LOAD ACTIVE SUB DESCRIPTION
+0 loaded units listed.
+
+== enabled radxa/tcp services ==
+radxa-adbd@.service                        disabled        enabled
+radxa-direct-lan-keepalive.service         enabled         enabled
+radxa-ecm@.service                         enabled         enabled
+radxa-ncm@.service                         disabled        enabled
+radxa-usbnet@.service                      alias           -
+radxa3e-auto-link.service                  enabled         enabled
+radxa3e-control-bridge.service             enabled         enabled
+radxa3e-external-osd.service               enabled         enabled
+radxa3e-gs.service                         enabled         enabled
+radxa3e-guard.service                      enabled         enabled
+radxa3e-mode-button.service                enabled         enabled
+radxa3e-osd-status.service                 disabled        enabled
+radxa3e-power-button.service               enabled         enabled
+radxa3e-record-button.service              enabled         enabled
+radxa3e-record-mount-watch.service         static          -
+radxa3e-record-mount.service               enabled         enabled
+radxa3e-record-sync.service                static          -
+radxa3e-recorder.service                   disabled        enabled
+radxa3e-remux-scan.service                 static          -
+radxa3e-signal-loss-watch.service          enabled         enabled
+radxa3e-udp-splitter.service               disabled        enabled
+rtp-reorder-proxy.service                  disabled        enabled
+ssh.service                                enabled         enabled
+sshd.service                               alias           -
+tailscaled.service                         enabled         enabled
+tcp-rtp-to-udp.service                     enabled         enabled
+ssh.socket                                 disabled        enabled
+radxa-otgutils.target                      disabled        enabled
+rescue-ssh.target                          static          -
+radxa3e-record-mount-watch.timer           enabled         enabled
+radxa3e-record-sync.timer                  disabled        enabled
+radxa3e-remux-scan.timer                   enabled         enabled
+
+== active units ==
+  NetworkManager.service             loaded active running Network Manager
+  radxa-direct-lan-keepalive.service loaded active running Keep Radxa direct LAN link to Raspberry Pi alive
+  radxa3e-auto-link.service          loaded active running Radxa 3E automatic local/Tailscale FPV link selector
+  radxa3e-control-bridge.service     loaded active running Radxa 3E UART to camera UDP bridge (C)
+  radxa3e-external-osd.service       loaded active running Radxa 3E persistent external OSD column
+  radxa3e-gs.service                 loaded active running FPV ground station receiver for Radxa 3E
+  radxa3e-guard.service              loaded active running Radxa 3E guard for FPV ground station
+  radxa3e-mode-button.service        loaded active running Radxa 3E video source mode button
+  radxa3e-power-button.service       loaded active running Radxa 3E power button watcher
+  radxa3e-record-button.service      loaded active running Radxa 3E recording button watcher
+  radxa3e-signal-loss-watch.service  loaded active running Radxa 3E signal-loss splash and recording watcher
+  ssh.service                        loaded active running OpenBSD Secure Shell server
+  tailscaled.service                 loaded active running Tailscale node agent
+  tcp-rtp-to-udp.service             loaded active running TCP ordered RTP receiver for DJI-over-Tailscale video
+
+== timers ==
+Wed 2026-05-13 08:16:10 UTC 2s left     Wed 2026-05-13 08:16:00 UTC 7s ago     radxa3e-record-mount-watch.timer radxa3e-record-mount-watch.service
+Wed 2026-05-13 08:16:40 UTC 32s left    Wed 2026-05-13 08:15:40 UTC 27s ago    radxa3e-remux-scan.timer         radxa3e-remux-scan.service
+
+== links ==
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+end1             UP             192.168.121.51/24 192.168.137.180/24 fe80::189a:99ff:feae:c2e6/64 
+tailscale0       UNKNOWN        100.80.47.96/32 fd7a:115c:a1e0::d634:2f60/128 fe80::366d:7dd2:353:3057/64 
+
+== routes ==
+default via 192.168.137.1 dev end1 proto dhcp src 192.168.137.180 metric 200 
+192.168.121.0/24 dev end1 proto kernel scope link src 192.168.121.51 metric 200 
+192.168.137.0/24 dev end1 proto kernel scope link src 192.168.137.180 metric 200 
+
+== source mode ==
+RADXA3E_SOURCE_MODE=camera
+
+== runtime link mode ==
+camera 192.168.121.50
+
+== gpio chips ==
+gpiochip0 - 32 lines:
+	line   0:      unnamed  "board-led"  output  active-high [used]
+	line   1:      unnamed       unused   input  active-high 
+	line   2:      unnamed       unused   input  active-high 
+	line   3:      unnamed  "interrupt"   input  active-high [used]
+	line   4:      unnamed       unused   input  active-high 
+	line   5:      unnamed       unused   input  active-high 
+	line   6:      unnamed       unused   input  active-high 
+	line   7:      unnamed       unused   input  active-high 
+	line   8:      unnamed       unused   input  active-high 
+	line   9:      unnamed       unused   input  active-high 
+	line  10:      unnamed       unused   input  active-high 
+	line  11:      unnamed       unused   input  active-high 
+	line  12:      unnamed       unused   input  active-high 
+	line  13:      unnamed       unused   input  active-high 
+	line  14:      unnamed       unused   input  active-high 
+	line  15:      unnamed       unused   input  active-high 
+	line  16:      unnamed       unused   input  active-high 
+	line  17:      unnamed       unused   input  active-high 
+	line  18:      unnamed       unused   input  active-high 
+	line  19:      unnamed       unused   input  active-high 
+	line  20:      unnamed       unused   input  active-high 
+	line  21:      unnamed        "sel"  output  active-high [used]
+	line  22:      unnamed       unused   input  active-high 
+	line  23:      unnamed       unused   input  active-high 
+	line  24:     "PIN_10"       unused   input  active-high 
+	line  25:      "PIN_8"       unused   input  active-high 
+	line  26:      unnamed       unused   input  active-high 
+	line  27:      unnamed       unused   input  active-high 
+	line  28:      unnamed       unused   input  active-high 
+	line  29:      unnamed       unused   input  active-high 
+	line  30:      unnamed       unused   input  active-high 
+	line  31:      unnamed       unused   input  active-high 
+gpiochip1 - 32 lines:
+	line   0:      "PIN_3"       unused   input  active-high 
+	line   1:      "PIN_5"       unused   input  active-high 
+	line   2:      unnamed       unused   input  active-high 
+	line   3:      unnamed       unused   input  active-high 
+	line   4:     "PIN_37"       unused   input  active-high 
+	line   5:      unnamed       unused   input  active-high 
+	line   6:      unnamed       unused   input  active-high 
+	line   7:      unnamed       unused   input  active-high 
+	line   8:      unnamed       unused   input  active-high 
+	line   9:      unnamed       unused   input  active-high 
+	line  10:      unnamed       unused   input  active-high 
+	line  11:      unnamed       unused   input  active-high 
+	line  12:      unnamed       unused   input  active-high 
+	line  13:      unnamed       unused   input  active-high 
+	line  14:      unnamed       unused   input  active-high 
+	line  15:      unnamed       unused   input  active-high 
+	line  16:      unnamed       unused   input  active-high 
+	line  17:      unnamed       unused   input  active-high 
+	line  18:      unnamed       unused   input  active-high 
+	line  19:      unnamed       unused   input  active-high 
+	line  20:      unnamed       unused   input  active-high 
+	line  21:      unnamed       unused   input  active-high 
+	line  22:      unnamed       unused   input  active-high 
+	line  23:      unnamed       unused   input  active-high 
+	line  24:      unnamed       unused   input  active-high 
+	line  25:      unnamed       unused   input  active-high 
+	line  26:      unnamed       unused   input  active-high 
+	line  27:      unnamed       unused   input  active-high 
+	line  28:      unnamed       unused   input  active-high 
+	line  29:      unnamed       unused   input  active-high 
+	line  30:      unnamed       unused   input  active-high 
+	line  31:      unnamed       unused   input  active-high 
+gpiochip2 - 32 lines:
+	line   0:      unnamed       unused   input  active-high 
+	line   1:      unnamed       unused   input  active-high 
+	line   2:      unnamed       unused   input  active-high 
+	line   3:      unnamed       unused   input  active-high 
+	line   4:      unnamed       unused   input  active-high 
+	line   5:      unnamed       unused   input  active-high 
+	line   6:      unnamed       unused   input  active-high 
+	line   7:      unnamed       unused   input  active-high 
+	line   8:      unnamed       unused   input  active-high 
+	line   9:      unnamed       unused   input  active-high 
+	line  10:      unnamed       unused   input  active-high 
+	line  11:      unnamed       unused   input  active-high 
+	line  12:      unnamed       unused   input  active-high 
+
+== serial/i2c ==
+crw-rw---- 1 root i2c     89,  4 May 13 07:50 /dev/i2c-4
+crw-rw---- 1 root dialout  4, 68 May 13 07:50 /dev/ttyS4
+
+== pixelpilot ==
+648 pixelpilot -p 5600 --codec h264 --screen-mode 1920 1080 60 --wfb-api-port 0 --osd --osd-elements 0 --osd-refresh 250 --osd-custom-message --osd-config /opt/radxa3e-groundstation/pixelpilot-osd-minimal.json --dvr-framerate 60 --dvr-fmp4 --dvr-sequenced-files --dvr-template /media/recordings/fpv_%Y-%m-%d_%H-%M-%S.fmp4
+
+== recording mount ==
+TARGET            SOURCE    FSTYPE OPTIONS
+/media/recordings /dev/sda1 exfat  rw,nosuid,nodev,noatime,fmask=0022,dmask=0022,iocharset=utf8,errors=remount-ro
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       6.6G  303M  6.3G   5% /media/recordings

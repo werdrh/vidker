@@ -1,0 +1,18 @@
+[Unit]
+Description=Radxa 3E signal-loss splash and recording watcher
+After=radxa3e-auto-link.service
+Wants=radxa3e-auto-link.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/radxa3e-signal-loss-watch
+ExecStart=/opt/radxa3e-groundstation/radxa3e-signal-loss-watch.sh
+Restart=always
+RestartSec=1
+TimeoutStopSec=3
+KillMode=control-group
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

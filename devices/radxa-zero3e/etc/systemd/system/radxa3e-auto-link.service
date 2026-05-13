@@ -1,0 +1,16 @@
+[Unit]
+Description=Radxa 3E automatic local/Tailscale FPV link selector
+After=NetworkManager.service tailscaled.service
+Wants=NetworkManager.service tailscaled.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/radxa3e-groundstation/radxa3e-auto-link.sh
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

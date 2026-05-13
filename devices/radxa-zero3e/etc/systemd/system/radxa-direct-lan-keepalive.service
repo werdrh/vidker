@@ -1,0 +1,19 @@
+[Unit]
+Description=Keep Radxa direct LAN link to Raspberry Pi alive
+After=NetworkManager.service
+Wants=NetworkManager.service
+
+[Service]
+Type=simple
+User=root
+Environment=IFACE=end1
+Environment=CONNECTION=DJI-Radxa-Direct
+Environment=PEER_IP=192.168.121.60
+ExecStart=/opt/radxa3e-groundstation/radxa-direct-lan-keepalive.sh
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

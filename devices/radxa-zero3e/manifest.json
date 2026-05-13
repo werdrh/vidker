@@ -1,0 +1,399 @@
+{
+  "host": "100.80.47.96",
+  "user": "rock",
+  "collected_at": "2026-05-13T08:16:08.978410+00:00",
+  "files": [
+    {
+      "path": "/opt/radxa3e-groundstation/no-signal.jpg",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 46766,
+      "sha256": "cd81ad4b4955f63912cf775d1be9c8a58d1f9f39203e0161f04c9919d9458d2e"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/pixelpilot-osd-minimal.json",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 260,
+      "sha256": "b26ca60bb949e295cefa0ed08661b665e49443b7e0f1f1cd95fbea5a047a8c84"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-auto-link.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 4707,
+      "sha256": "481acfe1be03848fd3fec5255f3e137beadfbba0601e00fa14542f6f3628f3e0"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-control-bridge-c",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 72048,
+      "sha256": "76dfea51f811779c78f4b82c1ffcf06398a911e6459e1312ac5cda9c8548a005"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-control-bridge.c",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 9812,
+      "sha256": "d9139dbec93d69a08e68ef4ee3a43937419342cfd683182e3d51f0fa4936f1a9"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-control-bridge.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 3482,
+      "sha256": "fcbfff6c0dbf67f97cd30b069eb191d495f4a0af97c8385f98f6a4368ef45f1d"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-external-osd.py",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 15513,
+      "sha256": "7057b587fdf63e99e9470b88803e297e1b935122f9b4f3af21ab0316394a72ac"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-gs.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 8496,
+      "sha256": "4789076dd5fd10720576b4b4365028025dcb86915be680ad7aa25a5c3bd234d3"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-guard.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 5086,
+      "sha256": "7cd71fa9620b1d6ddcb6aba525d59ee713b2b5a16ef92c0258fe261e0f468b70"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-mode-button.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 3697,
+      "sha256": "9a8c445550146f969270b13361cdd4c62e8dd541a1d629d905f8aed603b5a254"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-power-button.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 4927,
+      "sha256": "9f691a398855abc557e698572f1c142ce16a160c7b640509cbabd11f1f185eda"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-record-button.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 21900,
+      "sha256": "8ed7e2c7bbcc28b9dbc1317e49a5102ce7cd1756329fcde74a3ef775b85d603b"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-recorder.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 4028,
+      "sha256": "068541a2feeb86ad3b9127916c38d708f2587d02559669f6d961d8bcf744238c"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-record-mount.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 2199,
+      "sha256": "0ebf9ca2d11ffa8e2f48ece4271a18e14eda8255a9094fd4018bd41fc1b214b3"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-record-status-sync.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1383,
+      "sha256": "30e10b0960d695c16e73c79b1c9acb3b8900003583ee661fc25519b009221071"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-signal-loss-watch.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 3180,
+      "sha256": "256e5d0cb8a6b31381a97278ea18b7e3a2d2f77ba9bf746f0ebff6978eabb073"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-splash.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1873,
+      "sha256": "54fc97c0c793acda7b8c038f11d16b7e43ab07cc1e6efe8be2b06c9997f43cc6"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa3e-sync-recording.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1444,
+      "sha256": "bd0ce42b2fa0ee45497979dd415b5606f7d25d5df86bcd51ec2d404bcc16bc16"
+    },
+    {
+      "path": "/opt/radxa3e-groundstation/radxa-direct-lan-keepalive.sh",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 1437,
+      "sha256": "b2e7d3c734ac3204b1da777636de90b6a9b6ebd452fa42e154249190e8f78f04"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-auto-link.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 370,
+      "sha256": "08dd3bdd50152bd623a4e9493bda0cc9bcaa256ad6d0dee5b19b1656131ba443"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-control-bridge.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 374,
+      "sha256": "bb07fece1e6e43bdde4acaedf83afcb82663f3df54d59c5ae9658ded1dd79a3a"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-external-osd.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 334,
+      "sha256": "b30163141d3358fc4be134a0451e9a132f2d16542dad346c9afcd08f30a48446"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-gs.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 565,
+      "sha256": "3e4b0765b1214f098adb91502cd1f2d2c75f456de8f672d317e9727b7bc7735e"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-guard.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 354,
+      "sha256": "0c97dec69faef93158d313a85a71e9c8f427e1df51dc7e400d438bb05b89fc62"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-mode-button.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 321,
+      "sha256": "def5d30ec75ced21904c01dd236c25540ea66cfa51d074796b5ed90f95636687"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-power-button.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 274,
+      "sha256": "f1c96297fd242c784d2ca5d8614c53357fa943876bdd1c004f8489397c990237"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-record-button.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 324,
+      "sha256": "61e0908c8987aeb18adf34874262233969fc457a842a32c8a73f0d2641adabd1"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-recorder.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 390,
+      "sha256": "da334a0a3b68a71badf63be3dc3e74ebea9a1f17df661017f77b54af5c1aef3b"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-record-mount.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 447,
+      "sha256": "1178aba2a1a8dade610992fd34b4f98e962b681bc67d97620bc0ec4ec61c42e1"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-record-mount-watch.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 197,
+      "sha256": "b4c9a3e331bcf8978b2a52545882513e40ea8fe4c3da4c33e29e821551c50766"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-record-mount-watch.timer",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 201,
+      "sha256": "72b6975f30055161dd1f7ed28bfab4b5e67e3946253b6dcc85205593c54b49f3"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-remux-scan.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 219,
+      "sha256": "bdfd486ed5112d6d20e94688493216f7bc4f31663bef74795937467adc3f4375"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-remux-scan.timer",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 210,
+      "sha256": "d4ff7ec028c9ea328e22611e484d57ef227c6033d662872a89baf6f6cff7c812"
+    },
+    {
+      "path": "/etc/systemd/system/radxa3e-signal-loss-watch.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 428,
+      "sha256": "269339cf8d5326ec4b5c19629cc652fd1f13595d789c6b899c382c875828c2a8"
+    },
+    {
+      "path": "/etc/systemd/system/radxa-direct-lan-keepalive.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 435,
+      "sha256": "c5a71b0a4fdd181d6b552e69d2c7c920cb6e0a5c1005b6e7b45134528c250f0f"
+    },
+    {
+      "path": "/etc/systemd/system/rtp-reorder-proxy.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 394,
+      "sha256": "130265833804099f1990e717dd67f110c67ccc83ad5d9e2d388ffc8c494022b7"
+    },
+    {
+      "path": "/etc/systemd/system/tcp-rtp-to-udp.service",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 378,
+      "sha256": "9a5edf9a9bf312ff4a85358d13debf3a5b059c3de46aa13082e5b62878e41bd5"
+    },
+    {
+      "path": "/etc/default/radxa3e-control-bridge",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 249,
+      "sha256": "271be0ba160cde2aa8ca26a6103895383c57dde44dbb4539d65f3dfd0b5c13db"
+    },
+    {
+      "path": "/etc/default/radxa3e-gs",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 591,
+      "sha256": "b769b7f613577922edd79c4e8b178ae63b9b7453aecc5561b3b28d019ca2ad68"
+    },
+    {
+      "path": "/etc/default/radxa3e-guard",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 128,
+      "sha256": "05c7834e26b1023d07fc80f44bec73bd2d62e6e917d23a1342e19fd2fb1cb4ff"
+    },
+    {
+      "path": "/etc/default/radxa3e-mode-button",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 231,
+      "sha256": "1fcdc2590ef353905f0a18dff7d66125e4a2ffc02f9af59d6c47ce9b76ba367c"
+    },
+    {
+      "path": "/etc/default/radxa3e-osd-status",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 368,
+      "sha256": "c38c3d5c0716b39735a77401475038f2bf5e517c3a6650de1fa385313b47e70e"
+    },
+    {
+      "path": "/etc/default/radxa3e-power-button",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 737,
+      "sha256": "b18de00ed87ece5a22bf847c91941b354dfd0ea985cffd6963aab54b916b7b3c"
+    },
+    {
+      "path": "/etc/default/radxa3e-record-button",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 237,
+      "sha256": "f880fb322d015db84140f65726324ac3670ebc7c11be456bdfc909c2c03d9716"
+    },
+    {
+      "path": "/etc/default/radxa3e-signal-loss-watch",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 229,
+      "sha256": "5c140d287afd1df17258ba3480aa9d5597e38fc4285146913dab6ff01d623cf6"
+    },
+    {
+      "path": "/etc/default/radxa3e-source-mode",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 27,
+      "sha256": "6716f86deaaa937b0b787ed4d3229ce31d5e28ccdd9bbe1e34e9af45d27e67d0"
+    },
+    {
+      "path": "/etc/default/u-boot",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 206,
+      "sha256": "8e1c524e32d23f05dca8b266485606fe20bc4d50dcd63f908bb173e249ea3861"
+    },
+    {
+      "path": "/boot/dtbo/rk3568-uart4-m1.dtbo",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 733,
+      "sha256": "1013d422d80e8bde750212bdea40b825a69e578a9ccabdd2bcf8228cf96520be"
+    },
+    {
+      "path": "/boot/dtbo/rk3568-i2c4-m0.dtbo",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 955,
+      "sha256": "7762495f4f94600709e742eec72f4abf80f32c3c9635f24fb287ca8e8974f307"
+    },
+    {
+      "path": "/boot/dtbo/managed.list",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 41,
+      "sha256": "9d3ad4f7e24af8f60145c25a9c3130e82b31ee572c72072370c66beeb944b2af"
+    },
+    {
+      "path": "/etc/systemd/logind.conf.d/99-radxa-ignore-power-key.conf",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 234,
+      "sha256": "70fbb59f61bea262f12a0088969d96fbe497b6ba6937586a340e9072ec9b2504"
+    },
+    {
+      "path": "/etc/ssh/sshd_config.d/99-radxa-password-login.conf",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 192,
+      "sha256": "37d29721ddae4a1b50b75aee93c61be0e4c3cfaa7996b2ee0c473aa4288bbc6a"
+    },
+    {
+      "path": "/etc/udev/rules.d/99-radxa-record-usb-power.rules",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 621,
+      "sha256": "94e7976f25542974c076f890feb4ec20ac28cd7070cd0008e8bbaf6d0d63ed30"
+    },
+    {
+      "path": "/etc/sysctl.d/99-radxa3e-quiet-console.conf",
+      "status": "ok",
+      "mode": "0o644",
+      "size": 110,
+      "sha256": "fb1e1e24f593716b77de8a8927098e20dc05ebff3c5da755825ac82fa4ddb2b1"
+    },
+    {
+      "path": "/usr/local/bin/tcp_rtp_to_udp",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 71560,
+      "sha256": "e737b10f6a797679d73f792ab8e4cf9823b4ccf75698ab70672a17f87e52ac8b"
+    },
+    {
+      "path": "/usr/local/bin/rtp_reorder_proxy",
+      "status": "ok",
+      "mode": "0o755",
+      "size": 71488,
+      "sha256": "ae2bb60efbb8e755910773fab1c9287c78ccaccce34b64890b0629d668eda6ef"
+    }
+  ]
+}

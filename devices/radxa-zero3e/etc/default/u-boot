@@ -1,0 +1,4 @@
+## /etc/default/u-boot - configuration file for u-boot-update(8)
+# Managed by Codex ground-station setup
+U_BOOT_FDT_OVERLAYS="rk3568-uart4-m1.dtbo rk3568-i2c4-m0.dtbo"
+U_BOOT_FDT_OVERLAYS_DIR="/boot/dtbo/"

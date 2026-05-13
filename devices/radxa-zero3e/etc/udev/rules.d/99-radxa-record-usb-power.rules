@@ -1,0 +1,6 @@
+# Keep external recording storage awake. Some USB sticks/hubs recover poorly
+# from autosuspend and disappear during DVR/remux writes.
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="8564", ATTR{idProduct}=="1000", TEST=="power/control", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="8564", ATTR{idProduct}=="1000", TEST=="power/autosuspend", ATTR{power/autosuspend}="-1"
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb-storage", TEST=="power/control", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb-storage", TEST=="power/autosuspend", ATTR{power/autosuspend}="-1"

@@ -1,0 +1,17 @@
+[Unit]
+Description=Radxa 3E UART to camera UDP bridge (C)
+After=NetworkManager.service
+Wants=NetworkManager.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/radxa3e-control-bridge
+User=root
+ExecStart=/opt/radxa3e-groundstation/radxa3e-control-bridge-c
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

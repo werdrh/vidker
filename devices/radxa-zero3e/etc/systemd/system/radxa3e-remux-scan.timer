@@ -1,0 +1,12 @@
+[Unit]
+Description=Periodic idle remux scan for Radxa 3E recordings
+
+[Timer]
+OnBootSec=45s
+OnUnitActiveSec=60s
+AccuracySec=10s
+Persistent=false
+Unit=radxa3e-remux-scan.service
+
+[Install]
+WantedBy=timers.target

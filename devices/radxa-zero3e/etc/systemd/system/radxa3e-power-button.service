@@ -1,0 +1,13 @@
+[Unit]
+Description=Radxa 3E power button watcher
+After=multi-user.target
+
+[Service]
+Type=simple
+EnvironmentFile=-/etc/default/radxa3e-power-button
+ExecStart=/opt/radxa3e-groundstation/radxa3e-power-button.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

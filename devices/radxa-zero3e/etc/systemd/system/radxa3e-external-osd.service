@@ -1,0 +1,16 @@
+[Unit]
+Description=Radxa 3E persistent external OSD column
+After=radxa3e-gs.service
+Wants=radxa3e-gs.service
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/radxa3e-osd-status
+ExecStart=/opt/radxa3e-groundstation/radxa3e-external-osd.py
+Restart=always
+RestartSec=1
+User=root
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

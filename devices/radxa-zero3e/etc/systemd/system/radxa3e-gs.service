@@ -1,0 +1,21 @@
+[Unit]
+Description=FPV ground station receiver for Radxa 3E
+After=network-online.target plymouth-quit.service plymouth-quit-wait.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/radxa3e-gs
+User=root
+WorkingDirectory=/root
+Environment=HOME=/root
+ExecStartPre=/bin/sleep 1
+ExecStart=/opt/radxa3e-groundstation/radxa3e-gs.sh
+ExecStartPost=/bin/sh -c 'sleep 2; /opt/radxa3e-groundstation/radxa3e-record-status-sync.sh'
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

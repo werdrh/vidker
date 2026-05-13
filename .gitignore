@@ -1,0 +1,26 @@
+# Keep machine secrets out of the recovery repository.
+*.key
+*.pem
+id_*
+!id_*.pub
+
+# FPV Mesh / WireGuard / Tailscale provisioning secrets.
+provision.json
+fpvmesh-provision.json
+agent.json
+*.conf.secret
+*.authkey
+
+# Runtime logs and captures.
+*.log
+*.h264
+*.fmp4
+*.mp4
+*.pcap
+*.pcapng
+
+# Local editor/cache noise.
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

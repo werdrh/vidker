@@ -1,0 +1,17 @@
+[Unit]
+Description=Radxa 3E guard for FPV ground station
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/default/radxa3e-guard
+User=root
+ExecStart=/opt/radxa3e-groundstation/radxa3e-guard.sh
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

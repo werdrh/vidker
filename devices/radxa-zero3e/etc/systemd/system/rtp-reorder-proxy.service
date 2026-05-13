@@ -1,0 +1,15 @@
+[Unit]
+Description=RTP reorder proxy for DJI-over-Tailscale video
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/rtp_reorder_proxy --listen-port 5602 --dest-ip 127.0.0.1 --dest-port 5600 --max-delay-us 8000
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

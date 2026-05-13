@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount external recording media for Radxa 3E
+After=local-fs.target systemd-udev-trigger.service dev-disk-by\x2dlabel-recordings.device
+Before=radxa3e-record-button.service radxa3e-auto-link.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'for i in {1..20}; do /opt/radxa3e-groundstation/radxa3e-record-mount.sh && exit 0; sleep 1; done; exit 0'
+RemainAfterExit=yes
+TimeoutStartSec=30
+
+[Install]
+WantedBy=multi-user.target

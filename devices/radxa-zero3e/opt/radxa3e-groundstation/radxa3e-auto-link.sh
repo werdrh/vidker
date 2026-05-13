@@ -127,6 +127,15 @@ ensure_pixelpilot() {
   fi
 }
 
+apply_aux_services() {
+  mode="$1"
+  if [ "$mode" = "tailscale" ]; then
+    systemctl start tcp-rtp-to-udp.service >/dev/null 2>&1 || true
+  else
+    systemctl stop tcp-rtp-to-udp.service >/dev/null 2>&1 || true
+  fi
+}
+
 apply_mode() {
   target="$1"
   mode="$2"
@@ -135,6 +144,8 @@ apply_mode() {
 
   if [ "$old" = "$new" ]; then
     ensure_pixelpilot
+    apply_aux_services "$mode"
+    notify_pi_source_mode "$target" "$mode"
     return
   fi
 
@@ -153,6 +164,7 @@ apply_mode() {
 
   systemctl restart radxa3e-control-bridge.service >/dev/null 2>&1 || true
   systemctl restart radxa3e-external-osd.service >/dev/null 2>&1 || true
+  apply_aux_services "$mode"
   notify_pi_source_mode "$target" "$mode"
 
   systemctl enable --now radxa3e-signal-loss-watch.service >/dev/null 2>&1 || true

@@ -9,6 +9,8 @@ DEST_PORT="${DEST_PORT:-5600}"
 DEV="${DEV:-/dev/video0}"
 WIDTH="${WIDTH:-720}"
 HEIGHT="${HEIGHT:-480}"
+OUT_WIDTH="${OUT_WIDTH:-1280}"
+OUT_HEIGHT="${OUT_HEIGHT:-720}"
 FPS="${FPS:-25}"
 BITRATE="${BITRATE:-2500000}"
 
@@ -38,7 +40,8 @@ exec gst-launch-1.0 -e \
   queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! \
   jpegdec ! \
   videoconvert ! \
-  video/x-raw,format=I420,width="$WIDTH",height="$HEIGHT",framerate="$FPS/1" ! \
+  videoscale method=0 add-borders=false ! \
+  video/x-raw,format=I420,width="$OUT_WIDTH",height="$OUT_HEIGHT",pixel-aspect-ratio=1/1,framerate="$FPS/1" ! \
   queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! \
   openh264enc rate-control=bitrate bitrate="$BITRATE" max-bitrate="$BITRATE" complexity=low gop-size="$FPS" enable-frame-skip=true multi-thread=4 ! \
   h264parse config-interval=-1 ! \

@@ -11,8 +11,14 @@ WIDTH="${WIDTH:-720}"
 HEIGHT="${HEIGHT:-480}"
 OUT_WIDTH="${OUT_WIDTH:-1280}"
 OUT_HEIGHT="${OUT_HEIGHT:-720}"
+SAFE_WIDTH="${SAFE_WIDTH:-1280}"
+SAFE_HEIGHT="${SAFE_HEIGHT:-702}"
 FPS="${FPS:-25}"
-BITRATE="${BITRATE:-2500000}"
+BITRATE="${BITRATE:-3500000}"
+BRIGHTNESS="${BRIGHTNESS:-30}"
+CONTRAST="${CONTRAST:-148}"
+SATURATION="${SATURATION:-160}"
+HUE="${HUE:-0}"
 
 find_easycap() {
   v4l2-ctl --list-devices 2>/dev/null | awk '
@@ -32,7 +38,7 @@ if [ ! -e "$DEV" ]; then
   exit 1
 fi
 
-v4l2-ctl -d "$DEV" --set-ctrl=brightness=26,contrast=140,saturation=150,hue=0,backlight_compensation=0 >/dev/null 2>&1 || true
+v4l2-ctl -d "$DEV" --set-ctrl=brightness="$BRIGHTNESS",contrast="$CONTRAST",saturation="$SATURATION",hue="$HUE",backlight_compensation=0 >/dev/null 2>&1 || true
 
 exec gst-launch-1.0 -e \
   v4l2src device="$DEV" io-mode=mmap do-timestamp=true ! \
@@ -41,6 +47,8 @@ exec gst-launch-1.0 -e \
   jpegdec ! \
   videoconvert ! \
   videoscale method=0 add-borders=false ! \
+  video/x-raw,format=I420,width="$SAFE_WIDTH",height="$SAFE_HEIGHT",pixel-aspect-ratio=1/1,framerate="$FPS/1" ! \
+  videobox border-alpha=0 top=-9 bottom=-9 left=0 right=0 ! \
   video/x-raw,format=I420,width="$OUT_WIDTH",height="$OUT_HEIGHT",pixel-aspect-ratio=1/1,framerate="$FPS/1" ! \
   queue max-size-buffers=2 max-size-bytes=0 max-size-time=0 leaky=downstream ! \
   openh264enc rate-control=bitrate bitrate="$BITRATE" max-bitrate="$BITRATE" complexity=low gop-size="$FPS" enable-frame-skip=true multi-thread=4 ! \

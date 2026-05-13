@@ -105,7 +105,16 @@ notify_pi_source_mode() {
       return
       ;;
   esac
-  MSG="$msg" TARGET="$target" PORT="$PI_SOURCE_MODE_PORT" python3 - <<'PY' >/dev/null 2>&1 || true
+
+  tailscale_pi_ip="$(getent ahostsv4 "$TAILSCALE_PI_HOST" 2>/dev/null | awk '{print $1; exit}')"
+  tailscale_pi_ip="${tailscale_pi_ip:-$TAILSCALE_PI_FALLBACK_IP}"
+
+  # Send to both the current video target and the Pi's management address.
+  # This matters when the camera and Pi are both connected: in camera mode the
+  # video target is the camera, but the Pi still needs a stop command.
+  for notify_target in "$target" "$tailscale_pi_ip" "$TAILSCALE_PI_HOST"; do
+    [ -n "$notify_target" ] || continue
+    MSG="$msg" TARGET="$notify_target" PORT="$PI_SOURCE_MODE_PORT" python3 - <<'PY' >/dev/null 2>&1 || true
 import os
 import socket
 
@@ -113,6 +122,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.settimeout(0.2)
 sock.sendto((os.environ["MSG"] + "\n").encode("ascii", "ignore"), (os.environ["TARGET"], int(os.environ["PORT"])))
 PY
+  done
 }
 
 ensure_pixelpilot() {

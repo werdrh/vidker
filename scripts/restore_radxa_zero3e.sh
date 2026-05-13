@@ -67,14 +67,13 @@ systemctl enable \
   radxa3e-mode-button.service \
   radxa3e-power-button.service \
   radxa-direct-lan-keepalive.service \
-  tcp-rtp-to-udp.service \
   radxa3e-record-mount.service \
   radxa3e-guard.service
 
 systemctl enable radxa3e-record-mount-watch.timer radxa3e-remux-scan.timer
 
 # These are kept in the snapshot for reference, but should not autostart in the current setup.
-systemctl disable rtp-reorder-proxy.service radxa3e-osd-status.service radxa3e-recorder.service radxa3e-udp-splitter.service 2>/dev/null || true
+systemctl disable tcp-rtp-to-udp.service rtp-reorder-proxy.service radxa3e-osd-status.service radxa3e-recorder.service radxa3e-udp-splitter.service 2>/dev/null || true
 
 if command -v u-boot-update >/dev/null 2>&1; then
   u-boot-update || true
@@ -86,7 +85,7 @@ if [ "$APPLY_NOW" = "1" ]; then
   systemctl restart radxa3e-gs.service radxa3e-control-bridge.service radxa3e-auto-link.service || true
   systemctl restart radxa3e-external-osd.service radxa3e-signal-loss-watch.service || true
   systemctl restart radxa3e-record-button.service radxa3e-mode-button.service radxa3e-power-button.service || true
-  systemctl restart radxa-direct-lan-keepalive.service tcp-rtp-to-udp.service radxa3e-guard.service || true
+  systemctl restart radxa-direct-lan-keepalive.service radxa3e-guard.service || true
 fi
 
 echo "Restore complete."

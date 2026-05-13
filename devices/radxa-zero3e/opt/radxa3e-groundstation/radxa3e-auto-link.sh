@@ -112,8 +112,13 @@ notify_pi_source_mode() {
   # Send to both the current video target and the Pi's management address.
   # This matters when the camera and Pi are both connected: in camera mode the
   # video target is the camera, but the Pi still needs a stop command.
+  sent_targets=""
   for notify_target in "$target" "$tailscale_pi_ip" "$TAILSCALE_PI_HOST"; do
     [ -n "$notify_target" ] || continue
+    case " $sent_targets " in
+      *" $notify_target "*) continue ;;
+    esac
+    sent_targets="$sent_targets $notify_target"
     MSG="$msg" TARGET="$notify_target" PORT="$PI_SOURCE_MODE_PORT" python3 - <<'PY' >/dev/null 2>&1 || true
 import os
 import socket

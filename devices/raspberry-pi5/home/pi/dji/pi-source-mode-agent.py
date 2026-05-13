@@ -21,7 +21,37 @@ def write_file(path, text):
     os.replace(tmp, path)
 
 
+def service_active(name):
+    result = subprocess.run(
+        ["systemctl", "is-active", "--quiet", name],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        check=False,
+    )
+    return result.returncode == 0
+
+
+def current_mode_tuple():
+    try:
+        parts = open(MODE_FILE, encoding="utf-8", errors="ignore").read().strip().split()
+    except OSError:
+        return None
+    if len(parts) < 4:
+        return None
+    return tuple(parts[:4])
+
+
 def set_mode(mode, dest_ip="", dest_port="5600", transport="udp"):
+    desired = (mode, dest_ip, dest_port, transport)
+    current = current_mode_tuple()
+    if current == desired:
+        if mode == "easycap" and service_active("easycap-udp.service") and not service_active("pi-dji-goggles-rtp.service"):
+            return False
+        if mode == "dji" and service_active("pi-dji-goggles-rtp.service") and not service_active("easycap-udp.service"):
+            return False
+        if mode == "camera" and not service_active("easycap-udp.service") and not service_active("pi-dji-goggles-rtp.service"):
+            return False
+
     now = int(time.time())
     write_file(MODE_FILE, f"{mode} {dest_ip} {dest_port} {transport} {now}\n")
 
@@ -35,6 +65,7 @@ def set_mode(mode, dest_ip="", dest_port="5600", transport="udp"):
     elif mode == "camera":
         run(["systemctl", "stop", "easycap-udp.service"])
         run(["systemctl", "stop", "pi-dji-goggles-rtp.service"])
+    return True
 
 
 def parse_message(data):
@@ -69,8 +100,8 @@ def main():
         if not parsed:
             print(f"ignored from {addr}: {data!r}", flush=True)
             continue
-        print(f"mode from {addr}: {parsed}", flush=True)
-        set_mode(*parsed)
+        if set_mode(*parsed):
+            print(f"mode applied from {addr}: {parsed}", flush=True)
 
 
 if __name__ == "__main__":

@@ -142,12 +142,37 @@ ensure_pixelpilot() {
   fi
 }
 
+desired_dvr_framerate() {
+  source_mode="$(sed -n 's/^RADXA3E_SOURCE_MODE=//p' "$SOURCE_MODE_FILE" 2>/dev/null | tail -n 1)"
+  case "${source_mode:-camera}" in
+    pi-easycap) echo "25" ;;
+    *) echo "60" ;;
+  esac
+}
+
+apply_pixelpilot_profile() {
+  marker="/run/radxa3e-pixelpilot-dvr-framerate"
+  desired="$(desired_dvr_framerate)"
+  current="$(cat "$marker" 2>/dev/null || true)"
+
+  if [ "$current" = "$desired" ]; then
+    return
+  fi
+
+  echo "$desired" > "$marker"
+  if systemctl is-active --quiet radxa3e-gs.service; then
+    echo "radxa3e-auto-link: restart pixelpilot for dvr_framerate=$desired"
+    systemctl restart radxa3e-gs.service >/dev/null 2>&1 || true
+  fi
+}
+
 apply_aux_services() {
   mode="$1"
   if [ "$mode" = "tailscale" ]; then
     systemctl start tcp-rtp-to-udp.service >/dev/null 2>&1 || true
   else
     systemctl stop tcp-rtp-to-udp.service >/dev/null 2>&1 || true
+    systemctl reset-failed tcp-rtp-to-udp.service >/dev/null 2>&1 || true
   fi
 }
 
@@ -159,6 +184,7 @@ apply_mode() {
 
   if [ "$old" = "$new" ]; then
     ensure_pixelpilot
+    apply_pixelpilot_profile
     apply_aux_services "$mode"
     notify_pi_source_mode "$target" "$mode"
     return
@@ -179,6 +205,7 @@ apply_mode() {
 
   systemctl restart radxa3e-control-bridge.service >/dev/null 2>&1 || true
   systemctl restart radxa3e-external-osd.service >/dev/null 2>&1 || true
+  apply_pixelpilot_profile
   apply_aux_services "$mode"
   notify_pi_source_mode "$target" "$mode"
 

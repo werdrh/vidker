@@ -24,6 +24,8 @@ set -euo pipefail
 : "${PIXELPILOT_DISABLE_GREGIDR:=0}"
 : "${PIXELPILOT_DISABLE_VSYNC:=0}"
 : "${PIXELPILOT_DVR:=0}"
+: "${PIXELPILOT_DVR_FRAMERATE:=auto}"
+: "${SOURCE_MODE_FILE:=/etc/default/radxa3e-source-mode}"
 : "${RECORD_MOUNT_HELPER:=/opt/radxa3e-groundstation/radxa3e-record-mount.sh}"
 
 ACTUAL_RECORD_DIR=""
@@ -120,6 +122,24 @@ pick_decoder() {
   fi
 }
 
+current_source_mode() {
+  local mode
+  mode="$(sed -n 's/^RADXA3E_SOURCE_MODE=//p' "${SOURCE_MODE_FILE}" 2>/dev/null | tail -n 1)"
+  printf '%s\n' "${mode:-camera}"
+}
+
+pick_dvr_framerate() {
+  if [[ "${PIXELPILOT_DVR_FRAMERATE}" != "auto" ]]; then
+    echo "${PIXELPILOT_DVR_FRAMERATE}"
+    return
+  fi
+
+  case "$(current_source_mode)" in
+    pi-easycap) echo "25" ;;
+    *) echo "60" ;;
+  esac
+}
+
 find_external_partition() {
   local best_name="" best_mount="" best_size=0
   local line name type rm size fstype mountpoint pkname
@@ -203,7 +223,7 @@ prepare_record_target() {
 }
 
 run_pixelpilot() {
-  local codec dvr_template
+  local codec dvr_template dvr_framerate
   local -a cmd
 
   codec="$(pick_codec)"
@@ -236,7 +256,8 @@ run_pixelpilot() {
 
   if [[ "${PIXELPILOT_DVR}" == "1" && -n "${ACTUAL_RECORD_DIR}" ]]; then
     dvr_template="${ACTUAL_RECORD_DIR}/${RECORD_BASENAME}_%Y-%m-%d_%H-%M-%S.fmp4"
-    cmd+=(--dvr-framerate 60 --dvr-fmp4 --dvr-sequenced-files --dvr-template "${dvr_template}")
+    dvr_framerate="$(pick_dvr_framerate)"
+    cmd+=(--dvr-framerate "${dvr_framerate}" --dvr-fmp4 --dvr-sequenced-files --dvr-template "${dvr_template}")
 
     if [[ "${RECORD}" == "1" ]]; then
       cmd+=(--dvr-start)
